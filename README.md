@@ -1,42 +1,26 @@
-📂 Estructura del Proyecto: Detección de Enfermedades
-🌟 El Archivo Principal
-AAA_MODELO_FINAL.ipynb
+📂 Estructura del Proyecto de IA
+A continuación se detalla el contenido del repositorio y la función de cada archivo en el desarrollo del proyecto.
 
-🚨 Este es el entregable final. Este notebook consolida todo el trabajo exitoso. Integra la limpieza, el aumento de datos, y ejecuta el Voting Ensemble (nuestro mejor modelo) para generar las predicciones finales. Si solo se ejecuta un archivo, debe ser este.
+🏆 El Corazón del Proyecto
+AAA_MODELO_FINAL.ipynb Este es el archivo maestro. Engloba todo el flujo de trabajo validado, desde el preprocesamiento hasta la predicción final. Es el notebook definitivo para ejecutar el modelo.
 
-🛠️ Desglose de Componentes
-Para llegar al modelo final, dividimos el trabajo en módulos específicos:
+🔍 Análisis y Preprocesamiento
+Archivos dedicados a entender y limpiar los datos antes del modelado:
 
-1. Análisis y Preparación de Datos
-EDA.ipynb: Análisis Exploratorio de Datos. Aquí diagnosticamos los problemas iniciales: dataset insuficiente (700 filas) y desbalanceado (5% casos graves).
+EDA.ipynb: Exploratory Data Analysis. Análisis visual y estadístico inicial de los datos.
 
-limpieza_de_datos...py: Script encargado de estandarizar formatos y tratar valores nulos (MICE).
+limpieza_de_datos_Predicciones_MICE_con_F1...: Scripts avanzados de limpieza, incluyendo imputación de datos (MICE) y métricas de evaluación.
 
-2. Estrategias de Mejora (Data Augmentation)
-statlog+Ensamble.py & InclusiónbasedeDatosIrani.py:
+🧠 Modelos y Técnicas Específicas
+Scripts donde se aislaron y probaron diferentes estrategias:
 
-Implementación de la solución al "Dataset Insuficiente".
+Modelo_Pytorch.ipynb: Implementación de redes neuronales utilizando PyTorch.
 
-Fusión con datasets externos (como STATLOG +270 pacientes) unificando los labels al formato del proyecto.
+Votingensamble...py: Archivos dedicados a técnicas de ensamblaje (Voting Classifiers) y su explicación.
 
-modelo_pseudo_labeling_explicado.py:
+Logistica...py: Pruebas con Regresión Logística, incluyendo GridSearch y manejo de outliers.
 
-Técnica avanzada para aprovechar datos de test sin etiqueta (usando 90% de confianza) y reentrenar el modelo sin overfitting.
+modelo_pseudo_labeling_explicado.py: Implementación de técnicas de aprendizaje semi-supervisado.
 
-3. Modelos y Experimentos
-Votingensamble1.py / VotingensambleExplicado.py:
-
-La "joya de la corona". Combina la Regresión Logística y Random Forest/XGBoost para superar la barrera del 53% de acierto.
-
-Logistic...py & Logistica+mediana.py:
-
-Pruebas aisladas con modelos lineales y optimización de hiperparámetros (GridSearch).
-
-🚀 Resumen del Flujo de Trabajo
-Entrada: Datos crudos + Datasets Externos.
-
-Proceso: Limpieza -> Data Augmentation -> Pseudo Labeling.
-
-Modelo: Voting Ensemble (Logística + Random Forest).
-
-Salida: AAA_MODELO_FINAL.ipynb ✅
+🧪 Pruebas y Borradores
+Pruebas1.ipynb / Pruebas2.ipynb: Notebooks "sucio" utilizados para experimentación rápida y testeos de código.
